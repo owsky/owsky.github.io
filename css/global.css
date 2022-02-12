@@ -1,0 +1,28 @@
+:root {
+  --orange: #d07746;
+  --blue: #375abc;
+  --yellow: #e2b035;
+  --black: #2a2628;
+  --white: #f1ebe5;
+  --green: #2a665b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+}
+
+body {
+  background-color: var(--white);
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

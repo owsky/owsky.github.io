@@ -3,24 +3,41 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>owsky's homepage</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/homepage.css">
+  <script src="js/homepage.js" defer></script>
 </head>
 
 <body>
-  <nav class="navbar">
-    <ul class="nav-links">
-      <li class="nav-item"><a href="#">Home</a></li>
-      <li class="nav-item"><a href="#">About</a></li>
-      <li class="nav-item"><a href="#">Projects</a></li>
-      <li class="nav-item"><a href="#">Contacts</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav>
+      <h1 class="noselect">owsky</h1>
+      <ul>
+        <li class="menu-item"><a href="home">Home</a></li>
+        <li class="menu-item"><a href="aboutme">About me</a></li>
+        <li class="menu-item"><a href="projects">Personal projects</a></li>
+        <li class="menu-item"><a href="resume">Resume</a></li>
+        <li class="menu-item"><a href="contact">Contact me</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
-    <div class="magic">This is where the magic happens</div>
+    <div class="introduction">
+      <div class="img-wrapper">
+        <img src="images/gabe.jpg" alt="GabeN">
+      </div>
+      <div class="adj-wrapper">
+        <div class="container">
+          <div class="text_hide"></div>
+          <div class="text">Developer</div>
+          <div class="text_cursor"></div>
+        </div>
+      </div>
+    </div>
   </main>
 </body>
 
