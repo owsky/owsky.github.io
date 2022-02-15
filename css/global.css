@@ -26,3 +26,30 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
+
+nav {
+  font-size: larger;
+}
+
+.nav-item {
+  padding: 0 25px;
+}
+
+.nav-link {
+  color: var(--black) !important;
+}
+
+.navbar-brand {
+  font-family: Courgette;
+  font-size: xx-large;
+}
+
+.nav-item:last-child {
+  background-color: var(--blue);
+  border-radius: 66px;
+  margin-left: 25px;
+}
+
+.nav-item:last-child a {
+  color: var(--white) !important;
+}
