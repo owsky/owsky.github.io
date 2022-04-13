@@ -25,7 +25,7 @@ export default function Project(props: ProjectProps) {
 
   return (
     <Card sx={{ width: 400, height: 300 }}>
-      <CardContent sx={{ height: "85%" }}>
+      <CardContent sx={{ height: "85%", textAlign: "center" }}>
         <Box
           sx={{
             display: "flex",
