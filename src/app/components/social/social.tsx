@@ -1,0 +1,52 @@
+import { BsLinkedin, BsGithub, BsEnvelopeFill } from "react-icons/bs"
+
+import scrolls from "./img/scrolls.png"
+
+import "./social.css"
+
+export default function Social() {
+  return (
+    <section id="social">
+      <div className="social--first-row">
+        <h2 className="social--heading">Get in Touch</h2>
+      </div>
+      <div className="social--second-row">
+        <div className="social--left-column">
+          <div className="social--buttons">
+            <button
+              className="social--button"
+              onClick={() => {
+                window.open("https://www.linkedin.com/in/owsky/", "_blank")
+              }}
+            >
+              <span>
+                <BsLinkedin /> LinkedIn
+              </span>
+            </button>
+            <button
+              className="social--button"
+              onClick={() => {
+                window.open("mailto:nick.bertocco@gmail.com", "_blank")
+              }}
+            >
+              <span>
+                <BsEnvelopeFill /> Email
+              </span>
+            </button>
+            <button
+              className="social--button"
+              onClick={() => window.open("https://github.com/owsky", "_blank")}
+            >
+              <span>
+                <BsGithub /> GitHub
+              </span>
+            </button>
+          </div>
+        </div>
+        <div className="social--right-column">
+          <img className="social--img" src={scrolls} alt="" />
+        </div>
+      </div>
+    </section>
+  )
+}
