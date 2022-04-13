@@ -1,3 +1,4 @@
+import { Button } from "react-bootstrap"
 import { BsLinkedin, BsGithub, BsEnvelopeFill } from "react-icons/bs"
 
 import scrolls from "./img/scrolls.png"
@@ -13,7 +14,7 @@ export default function Social() {
       <div className="social--second-row">
         <div className="social--left-column">
           <div className="social--buttons">
-            <button
+            <Button
               className="social--button"
               onClick={() => {
                 window.open("https://www.linkedin.com/in/owsky/", "_blank")
@@ -22,8 +23,8 @@ export default function Social() {
               <span>
                 <BsLinkedin /> LinkedIn
               </span>
-            </button>
-            <button
+            </Button>
+            <Button
               className="social--button"
               onClick={() => {
                 window.open("mailto:nick.bertocco@gmail.com", "_blank")
@@ -32,15 +33,15 @@ export default function Social() {
               <span>
                 <BsEnvelopeFill /> Email
               </span>
-            </button>
-            <button
+            </Button>
+            <Button
               className="social--button"
               onClick={() => window.open("https://github.com/owsky", "_blank")}
             >
               <span>
                 <BsGithub /> GitHub
               </span>
-            </button>
+            </Button>
           </div>
         </div>
         <div className="social--right-column">

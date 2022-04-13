@@ -42,7 +42,7 @@
   border: none;
   font-size: 1.1em;
   padding: 10px 20px;
-  background-color: var(--blue);
+  /* background-color: var(--blue); */
   color: white;
   border-radius: 25px;
   cursor: pointer;

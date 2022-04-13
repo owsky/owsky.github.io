@@ -2,6 +2,7 @@
 import resume from "./resume.pdf"
 
 import "./navbar.css"
+import { Button } from "react-bootstrap"
 
 export default function Navbar() {
   return (
@@ -26,9 +27,18 @@ export default function Navbar() {
               </a>
             </li>
             <li>
-              <a href={resume} download="resume.pdf" className="nav--button">
+              <Button
+                style={{
+                  borderRadius: "25px",
+                  padding: "6px 18px",
+                  fontSize: "1em",
+                }}
+                onClick={() => {
+                  window.open(resume, "__blank")
+                }}
+              >
                 Resume
-              </a>
+              </Button>
             </li>
           </ul>
         </div>
