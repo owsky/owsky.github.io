@@ -1,7 +1,7 @@
 import { Button } from "react-bootstrap"
 import { BsLinkedin, BsGithub, BsEnvelopeFill } from "react-icons/bs"
 
-import scrolls from "./img/scrolls-min.png"
+import scrolls from "./img/scrolls.png"
 
 import "./social.css"
 
