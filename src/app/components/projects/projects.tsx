@@ -7,7 +7,7 @@ import projectsData from "./projectsData"
 export default function Projects() {
   const projectsElements = projectsData.map(project => {
     return (
-      <Col lg="6">
+      <Col key={project.title} lg="6">
         <Project {...project} />
       </Col>
     )
