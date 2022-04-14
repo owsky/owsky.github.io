@@ -110,6 +110,12 @@
   --cream: #fef5ef;
   --light-brown: #e4bb97;
   --grey: #333333;
+
+  --sm: 576px;
+  --md: 768px;
+  --lg: 992px;
+  --xl: 1200px;
+  --xxl: 1400px;
 }
 
 #root {
@@ -119,4 +125,11 @@
 
 section {
   padding: 15px 0;
+}
+
+@media screen and (max-width: 767px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
 }

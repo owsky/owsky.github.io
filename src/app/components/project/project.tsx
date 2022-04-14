@@ -23,6 +23,7 @@ export default function Project(props: ProjectProps) {
         height: "23rem",
         borderRadius: "10px",
         fontSize: "0.9em",
+        margin: "0 auto",
       }}
     >
       <Card.Body className="project--card">
@@ -34,7 +35,7 @@ export default function Project(props: ProjectProps) {
           <Card.Text>{props.description}</Card.Text>
         </div>
 
-        <Card.Text>
+        <Card.Text style={{ fontStyle: "italic" }}>
           Technologies:
           <br />
           {techs}

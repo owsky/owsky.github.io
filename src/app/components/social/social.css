@@ -15,6 +15,12 @@
   margin-bottom: -25px;
 }
 
+.social--body {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
 .social--second-row {
   display: flex;
   align-items: center;
@@ -31,20 +37,28 @@
 
 .social--buttons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 100%;
+  /* width: 7em; */
   justify-content: center;
+  align-items: center;
   gap: 10px;
   padding-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .social--buttons {
+    flex-direction: column;
+  }
 }
 
 .social--button {
   border: none;
   font-size: 1.1em;
   padding: 10px 20px;
-  /* background-color: var(--blue); */
+  width: 6.8em;
   color: white;
-  border-radius: 25px;
+  border-radius: 50px !important;
   cursor: pointer;
 }
 
