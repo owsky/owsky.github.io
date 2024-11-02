@@ -30,7 +30,11 @@ import { socials } from "../content/socials.ts";
 </html>
 
 <style is:global>
-  /* Add any global styles here */
+  @font-face {
+    font-family: "PublicSans";
+    src: url("/src/assets/public-sans-variable-font.ttf");
+  }
+
   :root {
     --color-primary: 139, 92, 246; /* Purple-500 */
   }
@@ -40,5 +44,6 @@ import { socials } from "../content/socials.ts";
   }
   body {
     @apply bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+    font-family: "PublicSans", sans-serif;
   }
 </style>
