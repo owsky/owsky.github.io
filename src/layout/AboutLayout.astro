@@ -1,25 +1,26 @@
 ---
-import { Image } from "astro:assets"
-import profileImage from "../assets/profile_picture.png"
+import { Image } from "astro:assets";
+import profileImage from "../assets/profile_picture.png";
 
 interface Props {
-  description: [string, string]
+  description: [string, string];
 }
 
-const { description } = Astro.props
+const { description } = Astro.props;
 ---
 
 <section id="about" class="space-y-6">
   <h2 class="text-4xl font-bold text-center">About Me</h2>
   <div class="flex justify-center flex-col md:flex-row items-center gap-12">
     <div class="relative">
-      <div class="absolute inset-0 bg-purple-500 rounded-full blur-md"></div>
+      <div class="absolute inset-0 rounded-full bg-gray-950 blur-md"></div>
+      <!-- bg-purple-500 -->
       <Image
         src={profileImage}
-        alt="owsky"
-        width={256}
-        height={256}
-        class="rounded-full object-cover relative z-10 min-w-[180px]"
+        alt="Profile picture"
+        width={512}
+        quality="100"
+        class="rounded-full object-cover relative z-10"
       />
     </div>
     <div class="text-lg max-w-2xl space-y-4">
@@ -31,3 +32,10 @@ const { description } = Astro.props
     </div>
   </div>
 </section>
+
+<style>
+  img {
+    width: 256px;
+    min-width: 200px;
+  }
+</style>
