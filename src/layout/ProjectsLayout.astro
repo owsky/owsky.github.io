@@ -1,0 +1,17 @@
+---
+import Project from "../components/Project.astro"
+import type { ProjectInterface } from "../content/projects"
+
+interface Props {
+  projects: ProjectInterface[]
+}
+
+const { projects } = Astro.props
+---
+
+<section id="projects" class="space-y-6">
+  <h2 class="text-4xl font-bold text-center">Personal Projects</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {projects.map((project) => <Project project={project} />)}
+  </div>
+</section>

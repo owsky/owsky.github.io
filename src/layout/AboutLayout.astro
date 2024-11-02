@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets"
+import profileImage from "../assets/profile_picture.png"
+
+interface Props {
+  description: [string, string]
+}
+
+const { description } = Astro.props
+---
+
+<section id="about" class="space-y-6">
+  <h2 class="text-4xl font-bold text-center">About Me</h2>
+  <div class="flex justify-center flex-col md:flex-row items-center gap-12">
+    <div class="relative">
+      <div class="absolute inset-0 bg-purple-500 rounded-full blur-md"></div>
+      <Image
+        src={profileImage}
+        alt="owsky"
+        width={256}
+        height={256}
+        class="rounded-full object-cover relative z-10 min-w-[180px]"
+      />
+    </div>
+    <div class="text-lg max-w-2xl space-y-4">
+      <p set:html={description[0]} />
+      <p
+        class="bg-purple-500 bg-opacity-40 p-4 rounded-md"
+        set:html={description[1]}
+      />
+    </div>
+  </div>
+</section>

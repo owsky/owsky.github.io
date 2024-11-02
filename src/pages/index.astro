@@ -1,0 +1,44 @@
+---
+import AboutLayout from "../layout/AboutLayout.astro"
+import EducationLayout from "../layout/EducationLayout.astro"
+import ProjectsLayout from "../layout/ProjectsLayout.astro"
+import SocialLayout from "../layout/SocialLayout.astro"
+import { about } from "../content/aboutDesc.ts"
+import { projects } from "../content/projects.ts"
+import { socials } from "../content/socials.ts"
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>owsky's website</title>
+  </head>
+  <body
+    class="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100"
+  >
+    <main class="container mx-auto px-4 py-12 space-y-24">
+      <AboutLayout description={about} />
+      <EducationLayout />
+      <ProjectsLayout projects={projects} />
+      <SocialLayout socials={socials} />
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  /* Add any global styles here */
+  :root {
+    --color-primary: 139, 92, 246; /* Purple-500 */
+  }
+  .dark {
+    --color-bg: 17, 24, 39; /* Gray-900 */
+    --color-text: 243, 244, 246; /* Gray-100 */
+  }
+  body {
+    @apply bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+  }
+</style>

@@ -1,0 +1,108 @@
+---
+import { Icon } from "astro-icon/components"
+import type { ProjectInterface } from "../content/projects"
+
+interface Props {
+  project: ProjectInterface
+}
+
+const { title, description, tech_stack, repository } = Astro.props.project
+---
+
+<!-- Project component -->
+<div
+  class="bg-gray-800 border-gray-700 rounded-lg overflow-hidden project-component flex flex-col"
+>
+  <!-- Project Header -->
+  <div class="bg-purple-500 bg-opacity-40 text-white p-4">
+    <h3 class="text-xl font-semibold">{title}</h3>
+  </div>
+  <!-- Project Body -->
+  <div class="project-body flex-grow">
+    <!-- Tech Stack -->
+    <div class="tech-stack">
+      {
+        tech_stack.map((tech) => (
+          <div class="tech-stack-item">
+            <Icon name={tech.icon} class="tech-icon" />
+            {tech.alt}
+          </div>
+        ))
+      }
+    </div>
+    <!-- Description -->
+    <div class="description flex-grow">
+      <p class="text-sm">{description}</p>
+    </div>
+    <!-- Repository link -->
+    <div class="repository-link-container">
+      <a href={repository} target="_blank" class="repository-link">
+        <Icon name="mdi:github" /> Repository
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .project-component {
+    height: 100%;
+  }
+
+  .project-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  .repository-link-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+  }
+
+  .description {
+    margin: 0.3rem 0;
+  }
+
+  .repository-link {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 1.5rem;
+    transition: background-color 0.5s ease;
+  }
+
+  .repository-link:hover {
+    background-color: #7c3aed;
+  }
+
+  .repository-link svg {
+    margin-right: 0.5rem;
+  }
+
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    margin: 0.3rem 0.3rem;
+  }
+
+  .tech-stack-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 0.3rem 0.4rem;
+    margin: 0.3rem 0;
+    border-radius: 0.5rem;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+
+  .tech-icon {
+    margin-right: 0.2rem;
+  }
+</style>
