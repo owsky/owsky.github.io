@@ -3,9 +3,9 @@ import AboutLayout from "../layout/AboutLayout.astro";
 import EducationLayout from "../layout/EducationLayout.astro";
 import ProjectsLayout from "../layout/ProjectsLayout.astro";
 import SocialLayout from "../layout/SocialLayout.astro";
-import { about } from "../content/aboutDesc.ts";
-import { projects } from "../content/projects.ts";
-import { socials } from "../content/socials.ts";
+import { about } from "../content/aboutDesc";
+import { projects } from "../content/projects";
+import { socials } from "../content/socials";
 ---
 
 <!doctype html>
@@ -35,8 +35,8 @@ import { socials } from "../content/socials.ts";
 
 <style is:global>
   @font-face {
-    font-family: "PublicSans";
-    src: url("/src/assets/public-sans-variable-font.ttf");
+    font-family: "Public Sans";
+    src: local("Public Sans"), url("/src/assets/public-sans-variable-font.ttf");
   }
 
   :root {
@@ -48,6 +48,6 @@ import { socials } from "../content/socials.ts";
   }
   body {
     @apply bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100;
-    font-family: "PublicSans", sans-serif;
+    font-family: "Public Sans", sans-serif;
   }
 </style>
