@@ -14,7 +14,6 @@ const { description } = Astro.props;
   <div class="flex justify-center flex-col md:flex-row items-center gap-12">
     <div class="relative">
       <div class="absolute inset-0 rounded-full bg-gray-950 blur-md"></div>
-      <!-- bg-purple-500 -->
       <Image
         src={profileImage}
         alt="Profile picture"
@@ -25,10 +24,7 @@ const { description } = Astro.props;
     </div>
     <div class="text-lg max-w-2xl space-y-4">
       <p set:html={description[0]} />
-      <p
-        class="bg-purple-500 bg-opacity-40 p-4 rounded-md"
-        set:html={description[1]}
-      />
+      <p class="bg-purple-500/40 p-4 rounded-md" set:html={description[1]} />
     </div>
   </div>
 </section>

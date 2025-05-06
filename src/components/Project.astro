@@ -1,12 +1,12 @@
 ---
-import { Icon } from "astro-icon/components"
-import type { ProjectInterface } from "../content/projects"
+import { Icon } from "astro-icon/components";
+import type { ProjectInterface } from "../content/projects";
 
 interface Props {
-  project: ProjectInterface
+  project: ProjectInterface;
 }
 
-const { title, description, tech_stack, repository } = Astro.props.project
+const { title, description, tech_stack, repository } = Astro.props.project;
 ---
 
 <!-- Project component -->
@@ -14,7 +14,7 @@ const { title, description, tech_stack, repository } = Astro.props.project
   class="bg-gray-800 border-gray-700 rounded-lg overflow-hidden project-component flex flex-col"
 >
   <!-- Project Header -->
-  <div class="bg-purple-500 bg-opacity-40 text-white p-4">
+  <div class="bg-purple-500/40 text-white p-4">
     <h3 class="text-xl font-semibold">{title}</h3>
   </div>
   <!-- Project Body -->

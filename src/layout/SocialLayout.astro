@@ -1,11 +1,11 @@
 ---
-import { Icon } from "astro-icon/components"
+import { Icon } from "astro-icon/components";
 
 interface Props {
-  socials: { name: string; url: string; icon: string }[]
+  socials: { name: string; url: string; icon: string }[];
 }
 
-const { socials } = Astro.props
+const { socials } = Astro.props;
 ---
 
 <section id="social" class="space-y-6">
@@ -15,7 +15,7 @@ const { socials } = Astro.props
       socials.map((project) => (
         <a
           href={project.url}
-          class="p-2 bg-purple-500 bg-opacity-40 text-white rounded-full hover:bg-purple-600 transition-colors"
+          class="p-2 bg-purple-500/40 text-white rounded-full hover:bg-purple-600 transition-colors"
         >
           <Icon name={project.icon} class="w-6 h-6" />
         </a>

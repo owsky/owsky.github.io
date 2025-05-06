@@ -1,12 +1,13 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-
-import tailwind from '@astrojs/tailwind';
-
+import tailwindcss from '@tailwindcss/vite';
 import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), icon()]
-  , site: "https://owsky.github.io/",
-});
+  vite: {
+    plugins: [tailwindcss()]
+  },
+  integrations: [icon()],
+  site: "https://owsky.github.io/"
+})
